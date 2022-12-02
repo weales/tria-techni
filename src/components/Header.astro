@@ -1,0 +1,165 @@
+---
+import Logo from '../images/logo-center.png';
+import Circles from '../images/circles.png';
+import Facebook from '../images/facebook.png';
+import Twitter from '../images/twitter.png';
+import Email from '../images/email.png';
+---
+<header>
+  <div class="logo">
+    <img src={Circles} alt={Circles} class="circle-image image_rotate">
+    <img src={Logo} alt="Center Logo" class="logo-image">
+  </div>
+
+<div class="toggle"></div>
+<div class="navigation">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/work">Work</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+  <div class="social-bar">
+  <ul>
+  <li>
+  <a href="https://www.facebook.com/triatechni">
+  <img src={ Facebook } alt={Facebook} />
+  </a>
+  </li>
+  <li>
+  <a href="https://twitter.com/cssjeffy">
+  <img src={ Twitter } alt={ Twitter } />
+  </a>
+  </li>
+  </ul>
+  <a href="mailto:info@tria-techni.com" class="email-icon">
+  <img src={Email} alt="" />
+  </a>
+  </div>
+</div>
+</header>
+
+<style>
+  .logo {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  z-index: 20;
+}
+
+.circle-image {
+  max-width: 320px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.logo-image {
+  max-width: 240px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+  /* NAVIGATION */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  /*background-color: #fff;*/
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation.active {
+  left: 0;
+  background-color: black;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #6b4f57;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all ease-out 0.5s;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+  transition: all ease-in 0.5s;
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.5);
+}
+
+.navigation .email-icon {
+  position: absolute;
+  bottom: 20px;
+  transform: scale(0.5);
+}
+ /* TOGGLE */
+ .toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    background-image: url('../images/menu.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 160;
+    cursor: pointer;
+  }
+  
+  .toggle.active {
+    background: var(--primary-color);
+    background-image: url('../images/close.png');
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 1120px) {
+    .logo {
+    top: 10px;
+    left: 10px;
+    }
+    .logo-image {
+    max-width: 170px;
+    }
+    .circle-image {
+      max-width: 220px;
+    }
+  }
+
+</style>
