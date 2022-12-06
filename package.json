@@ -14,6 +14,7 @@
     "@astrolib/seo": "^0.2.1",
     "@fontsource/open-sans": "^4.5.13",
     "@fontsource/teko": "^4.5.9",
-    "astro": "^1.6.10"
+    "astro": "^1.6.10",
+    "astro-icon": "^0.8.0"
   }
 }

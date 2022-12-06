@@ -4,6 +4,7 @@ import Circles from '../images/circles.png';
 import Facebook from '../images/facebook.png';
 import Twitter from '../images/twitter.png';
 import Email from '../images/email.png';
+import { Icon } from 'astro-icon';
 ---
 <header>
   <div class="logo">
@@ -23,17 +24,17 @@ import Email from '../images/email.png';
   <ul>
   <li>
   <a href="https://www.facebook.com/triatechni">
-  <img src={ Facebook } alt={Facebook} />
+    <Icon name="akar-icons:facebook-fill" />  
   </a>
   </li>
   <li>
   <a href="https://twitter.com/cssjeffy">
-  <img src={ Twitter } alt={ Twitter } />
-  </a>
+    <Icon name="bi:twitter" /> 
+  </a> 
   </li>
   </ul>
   <a href="mailto:info@tria-techni.com" class="email-icon">
-  <img src={Email} alt="" />
+    <Icon name="ic:outline-alternate-email" />
   </a>
   </div>
 </div>
@@ -62,6 +63,20 @@ import Email from '../images/email.png';
   bottom: 0;
   margin: auto;
 }
+.social-bar svg {
+  width: 70px;
+  height: 70px;
+}
+.email-icon svg {
+  color: #6b4f57;
+  width: 70px;
+  height: 70px;
+  transition: all 0.3s ease-out;
+}
+.email-icon svg:hover {
+  color: #776aa5;
+  transition: all 0.3s ease-in;
+}
 
   /* NAVIGATION */
 .navigation {
@@ -70,7 +85,6 @@ import Email from '../images/email.png';
   left: 100%;
   width: 100%;
   height: 100%;
-  /*background-color: #fff;*/
   z-index: 150;
   display: flex;
   justify-content: center;
