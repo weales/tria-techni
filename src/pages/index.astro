@@ -15,6 +15,7 @@ import { Icon } from 'astro-icon';
 />
 
 <Layout title="Tria-Techni">
+
   <section class="home">
   <img src={MainImage} class="home-img" alt="" />
   <div class="home-content">
@@ -23,10 +24,11 @@ import { Icon } from 'astro-icon';
   responsive, accessible,
   performant, resilient, & beautiful <span class="website-emp">websites.</span>
   </p>
-  <a href="/services" class="btn"> <Icon name="icon-park:every-user" /> Find Out More</a> 
-  OR <a href="/contact" class="btn"> <Icon name="icon-park:airplay" /> Hire us</a>
+  <a href="/services" class="btn"> <Icon name="icon-park:airplay" /> Find Out More</a> 
+  <span class="select"> OR </span> <a href="/contact" class="btn">  <Icon name="icon-park:every-user" /> Hire us</a>
   </div>
   </section>
+
 </Layout>
 
 <style>
@@ -47,6 +49,12 @@ section.home {
   bottom: 0;
   right: 0;
   height: 110%;
+}
+.select {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 22px;
+  padding: 0 5px;
 }
 @media (min-width: 1121px) and (max-width: 1460px) {
   .home-content p {
