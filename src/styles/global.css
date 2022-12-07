@@ -34,7 +34,11 @@ p {
   margin: 0;
   font-weight: 300;
 }
-
+b {
+  font-weight: 700;
+  font-style: italic;
+  border-bottom: solid 5px #776aa5;
+}
 section {
   display: flex;
   flex-direction: column;
@@ -43,72 +47,6 @@ section {
   padding: 100px;
 }
 
-/* BUTTON */
-.btn {
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: clamp(1rem, 2.5vh, 2rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: inline-block;
-  background: var(--dark-brown-color);
-  text-decoration: none;
-  padding: 10px 30px;
-  margin: 20px 0;
-  border: 0;
-}
-
-.btn:hover {
-  transform: scale(0.98);
-}
-
-ul.transition {
-  display:flex;
-  position: fixed;
-  z-index: 200;
-  height: 100%;
-  width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-  margin: 0;
-  pointer-events: none;
-}
-
-
-ul.transition li {
-  transform: scaleY(0);
-  background: rgb(1, 100, 248);
-  width: 20%;
-}
-/* SERVICES PAGE */
-.services {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  text-align: center;
-}
-
-.services .service {
-  padding: 30px;
-}
-
-.services .service:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.services .service h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-top: 20px;
-  color: var(--secondary-color);
-}
-
-.services .service .icon img {
-  max-width: 100px;
-}
 
 /* WORK PAGE */
 .portfolio {

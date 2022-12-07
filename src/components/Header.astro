@@ -1,12 +1,10 @@
 ---
 import Logo from '../images/logo-center.png';
 import Circles from '../images/circles.png';
-import Facebook from '../images/facebook.png';
-import Twitter from '../images/twitter.png';
-import Email from '../images/email.png';
 import { Icon } from 'astro-icon';
 ---
 <header>
+
   <div class="logo">
     <img src={Circles} alt={Circles} class="circle-image image_rotate">
     <img src={Logo} alt="Center Logo" class="logo-image">
@@ -39,7 +37,6 @@ import { Icon } from 'astro-icon';
   </div>
 </div>
 </header>
-
 <style>
   .logo {
   position: absolute;
@@ -89,11 +86,14 @@ import { Icon } from 'astro-icon';
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: inherit;
+  transition: all 0.2s ease-out;
 }
 
 .navigation.active {
   left: 0;
   background-color: black;
+  transition: all 0.2s ease-in;
 }
 
 .navigation ul {

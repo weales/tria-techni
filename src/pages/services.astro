@@ -6,19 +6,17 @@ import { AstroSeo } from '@astrolib/seo';
   title="Tria-Techni: Service Page"
   description="This is the service page my servers"
 />
-<Layout title="Services">
-<section>
+<Layout>
+  
+<section id="services-container">
+ 
   <div class="title">
-    <h1>Services that we can help you with</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
-      iusto molestias accusamus rem nobis est, et laborum harum doloremque
-      nemo non, minima quos totam labore maxime iste alias ut esse? Repellat
-      eaque reiciendis laboriosam corporis fuga vero ratione veritatis
-      numquam, libero magni voluptatum omnis molestiae officiis
-      exercitationem qui quidem nam.
-    </p>
+    <p>Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility</b> to ensure universal access. We love making <b>complex things simple</b> and understandable. And we love helping organizations build <b>UI design systems that are robust and scalable.</b></p>
   </div>
+
+
+
+
   <div class="services">
     <div class="service">
       <div class="icon">
@@ -71,3 +69,41 @@ import { AstroSeo } from '@astrolib/seo';
   </div>
 </section>
 </Layout>
+
+<style>
+ #services-container {
+   padding-top: 480px;
+ }
+.services {
+  margin-top: 480px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.services .service {
+  padding: 30px;
+}
+
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
+
+.services .service .icon img {
+  max-width: 100px;
+}
+@media (max-width: 1120px) { 
+  #services-container {
+   padding-top: 250px;
+ }
+}
+
+</style>
