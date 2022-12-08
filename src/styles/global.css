@@ -34,11 +34,6 @@ p {
   margin: 0;
   font-weight: 300;
 }
-b {
-  font-weight: 700;
-  font-style: italic;
-  border-bottom: solid 5px #776aa5;
-}
 section {
   display: flex;
   flex-direction: column;

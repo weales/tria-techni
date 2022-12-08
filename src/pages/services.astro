@@ -10,11 +10,8 @@ import { AstroSeo } from '@astrolib/seo';
   
 <section id="services-container">
  
-  <div class="title">
-    <p>Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility</b> to ensure universal access. We love making <b>complex things simple</b> and understandable. And we love helping organizations build <b>UI design systems that are robust and scalable.</b></p>
-  </div>
-
-
+    <p>Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility</b> to ensure universal access.</p> 
+<p>We love making <b>complex things simple</b> and understandable. And we love helping organizations build <b>UI design systems that are robust and scalable.</b></p>
 
 
   <div class="services">
@@ -74,22 +71,29 @@ import { AstroSeo } from '@astrolib/seo';
  #services-container {
    padding-top: 480px;
  }
+ #services-container p {
+  font-size: 44px;
+  line-height: 4rem;
+ }
+ #services-container b {
+  font-weight: 700;
+  font-style: italic;
+  border-bottom: solid 5px #776aa5;
+ }
+ 
 .services {
-  margin-top: 480px;
+  margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   text-align: center;
 }
-
 .services .service {
   padding: 30px;
 }
-
 .services .service:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-
 .services .service h2 {
   font-size: 24px;
   font-weight: 500;
@@ -103,6 +107,15 @@ import { AstroSeo } from '@astrolib/seo';
 @media (max-width: 1120px) { 
   #services-container {
    padding-top: 250px;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ #services-container p {
+  font-size: clamp(1.5rem, 1vw + 1rem, 2.75rem);
+  line-height: 2.5rem;
+ }
+ #services-container b {
+  border-bottom: solid 1px #776aa5;
  }
 }
 
