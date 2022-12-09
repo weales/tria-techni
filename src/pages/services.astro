@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { AstroSeo } from '@astrolib/seo';
 import WebDesign from '../images/Web-Design.jpg';
+import TestOne from '../images/test01.jpg';
 import UIDesign from '../images/UI-Design.jpg';
 import MobileDesign from '../images/Mobile-Design.jpg';
 import Branding from '../images/branding.jpg';
@@ -26,14 +27,19 @@ import VideoEdited from '../images/Video-Edited.jpg';
 <div class="service_grid">
 
         <div>
-        <img src={ WebDesign } alt={ WebDesign }>
+        <div class="testimg-bg"></div>
         <h2>Web Design / Interactive</h2>
+        
         <p>The Internet is an ever changing environment that 
         demands that you keep up with the latest and greatest communication 
-        platforms. Your website is the first impression for your company and 
+        platforms.</p> 
+        
+        <p>Your website is the first impression for your company and 
         where customers make the decision to do business with you, decide what 
         products to buy, learn about events that are scheduled, who to consult, 
-        and what information is most important to them. Tria-Techni 
+        and what information is most important to them.</p>
+        
+        <p>Tria-Techni 
         provides websites that by far, stand out from the rest of the 
         competitors...</p>    
         </div>
@@ -101,6 +107,13 @@ import VideoEdited from '../images/Video-Edited.jpg';
 </Layout>
 
 <style>
+  .testimg-bg {
+    background-image: url('../images/test01.jpg');
+    background-size: cover;
+    height: 450px;
+    width: auto;
+    max-width: 100%;
+  }
  #services-container {
    padding-top: 440px;
  }
@@ -121,7 +134,8 @@ import VideoEdited from '../images/Video-Edited.jpg';
  }
 .service_grid {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+  /*grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );*/
+  grid-template-columns: 1fr;
   grid-gap: 20px;
   padding-bottom: 20px;
 }
@@ -131,30 +145,37 @@ import VideoEdited from '../images/Video-Edited.jpg';
   border-radius: 10px;
 }
 .service_grid div img {
-  min-width: 280px;
+  /*min-width: 280px;
   width: 100%;
-  height: auto;
+  height: auto;*/
+
+  height: 450px;
+  width: auto;
+  max-width: 100%;
 }
 @media (max-width: 320px) { 
+  #services-container {
+  padding-top: 260px;
+  }
   #services-container h2 {
     color: white;
     font-size: 2rem;
- }
- #services-container p {
+  }
+  #services-container p {
   font-size: 1rem;
- }
+  }
   #services-container {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   }
   .service_grid div {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   }
   .service_grid div img {
-    min-width: 240px;
-    width: 100%;
-    height: auto;
+  min-width: 240px;
+  width: 100%;
+  height: auto;
   }
 }
 @media (max-width: 530px) { 
@@ -166,6 +187,11 @@ import VideoEdited from '../images/Video-Edited.jpg';
 .service_grid div {
     padding: 15px;
   }
+  .service_grid div img {
+  height: 250px;
+  width: auto;
+  max-width: 100%;
+}
 }
 @media (min-width: 321px) and (max-width: 1120px) { 
   h1 {
