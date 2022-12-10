@@ -28,22 +28,24 @@ import VideoEdited from '../images/Video-Edited.jpg';
 
         <div>
         <div class="testimg-bg"></div>
-        <h2>Web Design / Interactive</h2>
-        
-        <p>The Internet is an ever changing environment that 
-        demands that you keep up with the latest and greatest communication 
-        platforms.</p> 
-        
-        <p>Your website is the first impression for your company and 
-        where customers make the decision to do business with you, decide what 
-        products to buy, learn about events that are scheduled, who to consult, 
-        and what information is most important to them.</p>
-        
-        <p>Tria-Techni 
-        provides websites that by far, stand out from the rest of the 
-        competitors...</p>    
-        </div>
 
+        <div class="test-container">
+          <h2>Web Design / Interactive</h2>
+          <p>The Internet is an ever changing environment that 
+          demands that you keep up with the latest and greatest communication 
+          platforms.</p> 
+          
+          <p>Your website is the first impression for your company and 
+          where customers make the decision to do business with you, decide what 
+          products to buy, learn about events that are scheduled, who to consult, 
+          and what information is most important to them.</p>
+          
+          <p>Tria-Techni 
+          provides websites that by far, stand out from the rest of the 
+          competitors...</p>    
+        
+        </div>
+      </div>
         <div>
         <img src={ UIDesign } alt={ UIDesign }>
         <h2>UI / UX</h2>
@@ -113,6 +115,12 @@ import VideoEdited from '../images/Video-Edited.jpg';
     height: 450px;
     width: auto;
     max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .test-container {
+    background-color:#6d525c;
+    padding: 20px;
   }
  #services-container {
    padding-top: 440px;
@@ -136,13 +144,14 @@ import VideoEdited from '../images/Video-Edited.jpg';
   display: grid;
   /*grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );*/
   grid-template-columns: 1fr;
-  grid-gap: 20px;
+  grid-gap: 5vh;
   padding-bottom: 20px;
 }
 .service_grid div {
-  background-color:#6d525c;
+  /*background-color:#6d525c;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 10px;*/
+
 }
 .service_grid div img {
   /*min-width: 280px;
