@@ -19,7 +19,7 @@ import VideoEdited from '../images/Video-Edited.jpg';
 
 <div class="service_intro">
 
-<p>Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility</b> to ensure universal access.</p> 
+<p>Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility </b> to ensure universal access.</p> 
 
 <p>We love making complex things simple and understandable. And we love helping organizations build UI design systems that are robust and scalable.
 </p>
@@ -28,10 +28,10 @@ import VideoEdited from '../images/Video-Edited.jpg';
 <div class="service_grid">
 
         <div>
-        <div class="testimg-bg"></div>
+        <div class="WebDesign-bg"><h2>Web Design / Interactive</h2></div>
 
         <div class="test-container">
-          <h2>Web Design / Interactive</h2>
+         
           <p>The Internet is an ever changing environment that 
           demands that you keep up with the latest and greatest communication 
           platforms.</p> 
@@ -48,35 +48,44 @@ import VideoEdited from '../images/Video-Edited.jpg';
         </div>
       </div>
         <div>
-        <img src={ UIDesign } alt={ UIDesign }>
-        <h2>UI / UX</h2>
-        <p>Tria-Techni is passionate about an intuitive 
-        user experience because the user is ultimately the one who is the 
-        target. We focus on the wants and needs of the user to create stunning 
-        solutions through our experience in Research, Strategy, and Design 
-        methodologies...</p>
+        <div class="UIUX-bg"><h2>UI / UX</h2></div>
+
+          <div class="test-container"> 
+          <p>Tria-Techni is passionate about an intuitive 
+          user experience because the user is ultimately the one who is the 
+          target. We focus on the wants and needs of the user to create stunning 
+          solutions through our experience in Research, Strategy, and Design 
+          methodologies...</p>
+          </div>
+
         </div>
 
         <div>
-        <img src={ MobileDesign }>      
-        <h2>Mobile Design</h2>
-        <p>With tablets and smartphones on the rise, nearly half 
-        of all internet users access online content from their mobile devices. 
-        If your website is not optimized to be viewed on mobile devices, then 
-        you may be losing customers. We design web sites that can be viewed on 
-        desktops as well as mobile devices.</p>
-        </div>
+        <div class="MobileDesign-bg"><h2>Mobile Design</h2></div>    
+
+          <div class="test-container">  
+          <p>With tablets and smartphones on the rise, nearly half 
+          of all internet users access online content from their mobile devices. 
+          If your website is not optimized to be viewed on mobile devices, then 
+          you may be losing customers. We design web sites that can be viewed on 
+          desktops as well as mobile devices.</p>
+          </div>
+
+      </div>
 
         <div>
-        <img src={ Branding } alt={ Branding }>
-        <h2>Branding</h2>
-        <p>Quality. Strength. Ability. Boldness. Trust.  What does
-        your brand say about you? When the time comes for a customer to decide 
-        on a brand will you be their first choice? Your brand needs to tell your
-        story to the customer both consciously and subconsciously conveying the
-        qualities that make you the best choice. Tria-Techni is a 
-        group of brand specialists and we know that your brand is more than just
-        a logo.</p>
+        <div class="BrandingDesign-bg"><h2>Branding</h2></div> 
+
+          <div class="test-container">  
+          <p>Quality. Strength. Ability. Boldness. Trust.  What does
+          your brand say about you? When the time comes for a customer to decide 
+          on a brand will you be their first choice? Your brand needs to tell your
+          story to the customer both consciously and subconsciously conveying the
+          qualities that make you the best choice. Tria-Techni is a 
+          group of brand specialists and we know that your brand is more than just
+          a logo.</p>
+          </div>
+
         </div>
 
         <div> 
@@ -90,14 +99,17 @@ import VideoEdited from '../images/Video-Edited.jpg';
         </div>
     
         <div>
-        <img src={ VideoEdited } alt={ VideoEdited }>
-        <h2>Video / Media</h2>
-        <p>Media is like vapor in that it is always changing. Tria-Techni
-        creates dynamic and creative plans that move with the 
-        market. We have a team of knowledgeable researchers skilled with all of 
-        the techniques that allow us to quickly change and adapt your strategy 
-        based off of our detailed research.  Keep the momentum flowing - with 
-        our help.</p>
+        <div class="VideoEdit-bg"><h2>Video / Media</h2></div> 
+
+          <div class="test-container"> 
+          <p>Media is like vapor in that it is always changing. Tria-Techni
+          creates dynamic and creative plans that move with the 
+          market. We have a team of knowledgeable researchers skilled with all of 
+          the techniques that allow us to quickly change and adapt your strategy 
+          based off of our detailed research.  Keep the momentum flowing - with 
+          our help.</p>
+          </div>
+
         <div>
 
         </div>
@@ -110,30 +122,55 @@ import VideoEdited from '../images/Video-Edited.jpg';
 </Layout>
 
 <style>
-  .testimg-bg {
-    background-image: url('../images/test01.jpg');
+  .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .VideoEdit-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
-    height: 450px;
+    height: 300px;
     width: auto;
     max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
   }
+  .WebDesign-bg {
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/test01.jpg');
+  }
+  .UIUX-bg {
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/UI-Design.jpg');
+  }
+  .MobileDesign-bg {
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/Mobile-Design.jpg');
+  }
+  .BrandingDesign-bg {
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/branding.jpg');
+  }
+  .VideoEdit-bg {
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/Video-Edited.jpg');
+  }
+  .WebDesign-bg h2, .UIUX-bg h2, .MobileDesign-bg h2, .BrandingDesign-bg h2, .VideoEdit-bg h2 {
+    color: #ffffffe6;
+    font-size: 4.5rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }
+
+
   .test-container {
-    background-color:#6d525c;
+    background-color:#55434a;
     padding: 20px;
   }
+
+
  #services-container {
    padding-top: 440px;
  }
  #services-container h2 {
-  color: white;
-  font-size: 2.50rem;
+  /*color: white;
+  font-size: 2.50rem;*/
  }
  #services-container p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.55rem;
-  line-height: 1.9rem;
+  line-height: 2.5rem;
   margin-bottom: 1.5rem;
  }
  #services-container b {
