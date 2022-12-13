@@ -1,13 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { AstroSeo } from '@astrolib/seo';
-import WebDesign from '../images/Web-Design.jpg';
-import TestOne from '../images/test01.jpg';
-import UIDesign from '../images/UI-Design.jpg';
-import MobileDesign from '../images/Mobile-Design.jpg';
-import Branding from '../images/branding.jpg';
-import GraphicDesign from '../images/Graphic-Design.jpg';
-import VideoEdited from '../images/Video-Edited.jpg';
 ---
 <AstroSeo
   title="Toronto Web Design & Mobile Design | Tria-Techni Creative Group"
@@ -23,6 +16,7 @@ import VideoEdited from '../images/Video-Edited.jpg';
 
 <p>We love making complex things simple and understandable. And we love helping organizations build UI design systems that are robust and scalable.
 </p>
+
 </div>
 
 <div class="service_grid">
@@ -30,7 +24,7 @@ import VideoEdited from '../images/Video-Edited.jpg';
         <div>
         <div class="WebDesign-bg"><h2>Web Design / Interactive</h2></div>
 
-        <div class="test-container">
+        <div class="service-container">
          
           <p>The Internet is an ever changing environment that 
           demands that you keep up with the latest and greatest communication 
@@ -50,7 +44,7 @@ import VideoEdited from '../images/Video-Edited.jpg';
         <div>
         <div class="UIUX-bg"><h2>UI / UX</h2></div>
 
-          <div class="test-container"> 
+          <div class="service-container"> 
           <p>Tria-Techni is passionate about an intuitive 
           user experience because the user is ultimately the one who is the 
           target. We focus on the wants and needs of the user to create stunning 
@@ -63,7 +57,7 @@ import VideoEdited from '../images/Video-Edited.jpg';
         <div>
         <div class="MobileDesign-bg"><h2>Mobile Design</h2></div>    
 
-          <div class="test-container">  
+          <div class="service-container">  
           <p>With tablets and smartphones on the rise, nearly half 
           of all internet users access online content from their mobile devices. 
           If your website is not optimized to be viewed on mobile devices, then 
@@ -76,7 +70,7 @@ import VideoEdited from '../images/Video-Edited.jpg';
         <div>
         <div class="BrandingDesign-bg"><h2>Branding</h2></div> 
 
-          <div class="test-container">  
+          <div class="service-container">  
           <p>Quality. Strength. Ability. Boldness. Trust.  What does
           your brand say about you? When the time comes for a customer to decide 
           on a brand will you be their first choice? Your brand needs to tell your
@@ -89,19 +83,22 @@ import VideoEdited from '../images/Video-Edited.jpg';
         </div>
 
         <div> 
-        <img src={ GraphicDesign } alt={ GraphicDesign }>
-        <h2>Graphic Design</h2>
-        <p>Are you memorable? The differentiator between you and the 
-        competitor is your design and you stand out in an over populated 
-        marketplace. Our expert team of designers will craft the difference that
-        gives you the validity and momentum your company needs to standout in 
-        the marketplace.</p>
+        <div class="GraphicDesign-bg"> <h2>Graphic Design</h2></div> 
+
+          <div class="service-container">
+          <p>Are you memorable? The differentiator between you and the 
+          competitor is your design and you stand out in an over populated 
+          marketplace. Our expert team of designers will craft the difference that
+          gives you the validity and momentum your company needs to standout in 
+          the marketplace.</p>
+          </div>
+
         </div>
     
         <div>
         <div class="VideoEdit-bg"><h2>Video / Media</h2></div> 
 
-          <div class="test-container"> 
+          <div class="service-container"> 
           <p>Media is like vapor in that it is always changing. Tria-Techni
           creates dynamic and creative plans that move with the 
           market. We have a team of knowledgeable researchers skilled with all of 
@@ -122,12 +119,13 @@ import VideoEdited from '../images/Video-Edited.jpg';
 </Layout>
 
 <style>
-  .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .VideoEdit-bg {
+
+  .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    height: 300px;
+    height: 450px;
     width: auto;
     max-width: 100%;
   }
@@ -143,34 +141,28 @@ import VideoEdited from '../images/Video-Edited.jpg';
   .BrandingDesign-bg {
     background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/branding.jpg');
   }
+  .GraphicDesign-bg {
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/Graphic-Design.jpg');
+  }
   .VideoEdit-bg {
     background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/Video-Edited.jpg');
   }
-  .WebDesign-bg h2, .UIUX-bg h2, .MobileDesign-bg h2, .BrandingDesign-bg h2, .VideoEdit-bg h2 {
+  .WebDesign-bg h2, .UIUX-bg h2, .MobileDesign-bg h2, .BrandingDesign-bg h2, .GraphicDesign-bg h2, .VideoEdit-bg h2 {
     color: #ffffffe6;
-    font-size: 4.5rem;
+    font-size: clamp(1.875rem, 5vw + 0.75rem, 5.625rem);
     letter-spacing: 0.3rem;
     text-transform: uppercase;
   }
-
-
-  .test-container {
+  .service-container {
     background-color:#55434a;
     padding: 20px;
   }
-
-
- #services-container {
+  #services-container {
    padding-top: 440px;
- }
- #services-container h2 {
-  /*color: white;
-  font-size: 2.50rem;*/
  }
  #services-container p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.55rem;
-  line-height: 2.5rem;
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 1.875rem);
   margin-bottom: 1.5rem;
  }
  #services-container b {
@@ -180,49 +172,19 @@ import VideoEdited from '../images/Video-Edited.jpg';
  }
 .service_grid {
   display: grid;
-  /*grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );*/
   grid-template-columns: 1fr;
   grid-gap: 5vh;
   padding-bottom: 20px;
 }
-.service_grid div {
-  /*background-color:#6d525c;
-  padding: 20px;
-  border-radius: 10px;*/
-
-}
-.service_grid div img {
-  /*min-width: 280px;
-  width: 100%;
-  height: auto;*/
-
-  height: 450px;
-  width: auto;
-  max-width: 100%;
-}
 @media (max-width: 320px) { 
   #services-container {
   padding-top: 260px;
-  }
-  #services-container h2 {
-    color: white;
-    font-size: 2rem;
-  }
-  #services-container p {
-  font-size: 1rem;
-  }
-  #services-container {
   padding-left: 10px;
   padding-right: 10px;
   }
-  .service_grid div {
-  margin-left: 10px;
-  margin-right: 10px;
-  }
-  .service_grid div img {
-  min-width: 240px;
-  width: 100%;
-  height: auto;
+  .service-container {
+    background-color:#55434a;
+    padding: 10px;
   }
 }
 @media (max-width: 530px) { 
@@ -231,31 +193,26 @@ import VideoEdited from '../images/Video-Edited.jpg';
     grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) );
     grid-gap: 20px;
   }
-.service_grid div {
-    padding: 15px;
+  .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
+    height: 200px;
   }
-  .service_grid div img {
-  height: 250px;
-  width: auto;
-  max-width: 100%;
-}
+  .WebDesign-bg h2, .UIUX-bg h2, .MobileDesign-bg h2, .BrandingDesign-bg h2, .GraphicDesign-bg h2, .VideoEdit-bg h2 { 
+    letter-spacing: 0;
+  }
 }
 @media (min-width: 321px) and (max-width: 1120px) { 
-  h1 {
-    font-size: clamp(3.375rem, 1vw + 1rem, 4rem);
-  }
   #services-container {
    padding-top: 250px;
    padding-left: 20px;
    padding-right: 20px;
  }
- #services-container p {
-  font-size: clamp(1.5rem, 1vw + 1rem, 2.75rem);
-  line-height: 2.5rem;
- }
  #services-container b {
   border-bottom: solid 1px #776aa5;
  }
 }
-
+@media (min-width: 531px) and (max-width: 1120px) { 
+  .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
+  height: 300px;
+  }
+} 
 </style>
