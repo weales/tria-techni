@@ -38,36 +38,15 @@ import Logo15 from '../images/portfolio/logos/VictorEnthios-Logo-1480x960.jpg';
 
 <Layout>
 <section id="work-container"> 
-  <div class="grid">
-
-    <div class="grid-item"><img src={ WebPort01 }></div>
-    <div class="grid-item"><img src={ WebPort02 }></div>
-    <div class="grid-item"><img src={ WebPort03 }></div>
-    <div class="grid-item"><img src={ Branding01 }></div>
-    <div class="grid-item"><img src={ Branding02 }></div>
-    <div class="grid-item"><img src={ Branding04 }></div>
-    <div class="grid-item"><img src={ Branding05 }></div>
-    <div class="grid-item"><img src={ Branding06 }></div>
-    <div class="grid-item"><img src={ Branding07 }></div>    
-    <div class="grid-item"><img src={ Branding08 }></div>
-    <div class="grid-item"><img src={ Branding09 }></div>
-    <div class="grid-item"><img src={ Branding10 }></div>
-    <div class="grid-item"><img src={ Branding11 }></div>
-    <div class="grid-item"><img src={ Logo01 }></div>
-    <div class="grid-item"><img src={ Logo02 }></div>
-    <div class="grid-item"><img src={ Logo03 }></div>
-    <div class="grid-item"><img src={ Logo04 }></div>
-    <div class="grid-item"><img src={ Logo05 }></div>
-    <div class="grid-item"><img src={ Logo06 }></div>
-    <div class="grid-item"><img src={ Logo07 }></div>
-    <div class="grid-item"><img src={ Logo08 }></div>
-    <div class="grid-item"><img src={ Logo09 }></div>
-    <div class="grid-item"><img src={ Logo10 }></div>
-    <div class="grid-item"><img src={ Logo11 }></div>
-    <div class="grid-item"><img src={ Logo12 }></div>
-    <div class="grid-item"><img src={ Logo13 }></div>
-    <div class="grid-item"><img src={ Logo14 }></div>
-    <div class="grid-item"><img src={ Logo15 }></div>
+  <div class="container container_2">
+    <div class="item" style="height: 600px;"><img src="https://picsum.photos/300/600" /></div>
+    <div class="item" style="height: 400px;"><img src="https://picsum.photos/300/400" /></div>
+    <div class="item" style="height: 200px;"><img src="https://picsum.photos/300/200" /></div>
+    <div class="item" style="height: 300px;"><img src="https://picsum.photos/300/300" /></div>
+    <div class="item" style="height: 550px;"><img src="https://picsum.photos/300/550" /></div>
+    <div class="item" style="height: 220px;"><img src="https://picsum.photos/300/220" /></div>
+    <div class="item" style="height: 440px;"><img src="https://picsum.photos/300/440" /></div>
+    <div class="item" style="height: 430px;"><img src="https://picsum.photos/300/630" /></div>
   </div>
 </section>
 </Layout>
@@ -76,66 +55,32 @@ import Logo15 from '../images/portfolio/logos/VictorEnthios-Logo-1480x960.jpg';
 #work-container {
   margin-top: 300px;
   height: 100vh;
-  padding: 100px;
+  padding: 0;
 }
-.grid {
-  max-width: 1900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.grid-item {
-  float: left;
-  width: 280px;
-  height: auto;
-  padding: 10px 10px;
-  left: 50% !important;
-  transform: translate(-50%);
-}
-.grid-item img {
-  max-width: 280px;
+.container {
   width: 100%;
-  height: auto;
+  position: relative;
 }
-.grid-item--height2 { 
-  height: 150px; 
+.item {
+  position: absolute;
+  text-align: center;
+  font-size: 2em;
+  font-weight: white;
+  color: white;
+  line-height: 1.5em;
+  overflow: hidden;
 }
-.grid-item--height3 { 
-  height: 240px; 
-}
-
-@media (max-width: 320px) {
-  .grid-item {
-    float: left;
-    width: 300px;
-    height: auto;
-  }
-  .grid img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 1120px) {
-  #work-container {
-    padding: 10px;
-  }
+.item img {
+  border-radius: 10px;  
 }
 </style>
 
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script is:inline src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/minimasonry@latest/build/minimasonry.min.js"></script>
 
 <script is:inline>
-$('.grid').isotope({
-  itemSelector: '.grid-item',
-  masonry: {
-    columnWidth: 100,
-    horizontalOrder: true
-  }
+var masonry2 = new MiniMasonry({
+  container: document.querySelector('.container_2'),
+  baseWidth: 300,
+  surroundingGutter: false
 });
 </script>
