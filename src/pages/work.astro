@@ -3,72 +3,124 @@ import Layout from '../layouts/Layout.astro';
 import { AstroSeo } from '@astrolib/seo';
 import WebPort01 from '../images/portfolio/web/das-1024x682.jpg';
 import WebPort02 from '../images/portfolio/web/mefashions-1480x960.jpg';
-import WebPort03 from '../images/portfolio/web/mefashions-1480x960.jpg';
+import WebPort03 from '../images/portfolio/web/natural-allergy4-1024x820.jpg';
 import Branding01 from '../images/portfolio/branding/AJ_Cards-Concept1.jpg';
 import Branding02 from '../images/portfolio/branding/Armored Support Kit2015-English.jpg';
 import Branding03 from '../images/portfolio/branding/bookmark-front.jpg';
+import Branding04 from '../images/portfolio/branding/C-Swabi-Card-Proof.jpg';
+import Branding05 from '../images/portfolio/branding/Half-Price-Thursdays-Poster-LoRes.jpg';
+import Branding06 from '../images/portfolio/branding/Kanger-Vinyl_Banner.jpg';
+import Branding07 from '../images/portfolio/branding/Kayla-Card-Proof.jpg';
+import Branding08 from '../images/portfolio/branding/Urban-Revival-CD-Cover-Master-LoRes.jpg';
+import Branding09 from '../images/portfolio/branding/WORSHIP-FLYER2.jpg';
+import Branding10 from '../images/portfolio/branding/Worth-Fitness-Flyer-Revised02.jpg';
+import Branding11 from '../images/portfolio/branding/Worth-fitness-Flyer.jpg';
+import Logo01 from '../images/portfolio/logos/ActivePhysical_Logo.jpg';
+import Logo02 from '../images/portfolio/logos/armored-films-Logo2.jpg';
+import Logo03 from '../images/portfolio/logos/BusinessWorkshop-1480x960.jpg';
+import Logo04 from '../images/portfolio/logos/CVDC-1480x960.jpg';
+import Logo05 from '../images/portfolio/logos/FCpipeline-Logo-1480x960.jpg';
+import Logo06 from '../images/portfolio/logos/Larouche-flyer-1480x960.jpg';
+import Logo07 from '../images/portfolio/logos/NaturalAllergySolutions-1480x960.jpg';
+import Logo08 from '../images/portfolio/logos/NaturalAllergySolutions22-1480x960.jpg';
+import Logo09 from '../images/portfolio/logos/RENSON-Calendar-2019.jpg';
+import Logo10 from '../images/portfolio/logos/Siddiqui-Law-Logo.jpg';
+import Logo11 from '../images/portfolio/logos/Spinex-Logo-1480x960.jpg';
+import Logo12 from '../images/portfolio/logos/TCSC-Master-Logo.jpg';
+import Logo13 from '../images/portfolio/logos/TheUrbanFrequency-Logo.jpg';
+import Logo14 from '../images/portfolio/logos/Traklounge-Logo.jpg';
+import Logo15 from '../images/portfolio/logos/VictorEnthios-Logo-1480x960.jpg';
 ---
 <AstroSeo
   title="Tria-Techni: Our"
   description="Our Work Page"
 />
+
 <Layout>
-<section>
-    <div class="grid">
-      <div class="grid-item grid-item--width2"></div>
-      <div class="grid-item grid-item--height2"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item grid-item--width2 grid-item--height2"></div>
-      <div class="grid-item grid-item--width2"></div>
-      <div class="grid-item grid-item--width2"></div>
-      <div class="grid-item grid-item--height2"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item grid-item--width2"></div>
-      <div class="grid-item grid-item--height2"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-    </div>
+<section id="work-container"> 
+  <div class="grid">
+    <div class="grid-item"><img src={ WebPort01 }></div>
+    <div class="grid-item"><img src={ WebPort02 }></div>
+    <div class="grid-item"><img src={ WebPort03 }></div>
+   <div class="grid-item"><img src={ Branding01 }></div>
+     <div class="grid-item"><img src={ Branding02 }></div>
+    <div class="grid-item"><img src={ Branding04 }></div>
+     <div class="grid-item"><img src={ Branding05 }></div>
+    <div class="grid-item"><img src={ Branding06 }></div>
+    <div class="grid-item"><img src={ Branding07 }></div>    
+    <div class="grid-item"><img src={ Branding08 }></div>
+    <div class="grid-item"><img src={ Branding09 }></div>
+    <div class="grid-item"><img src={ Branding10 }></div>
+    <div class="grid-item"><img src={ Branding11 }></div>
+    <div class="grid-item"><img src={ Logo01 }></div>
+    <div class="grid-item"><img src={ Logo02 }></div>
+   <div class="grid-item"><img src={ Logo03 }></div>
+    <div class="grid-item"><img src={ Logo04 }></div>
+    <div class="grid-item"><img src={ Logo05 }></div>
+    <div class="grid-item"><img src={ Logo06 }></div>
+    <div class="grid-item"><img src={ Logo07 }></div>
+    <div class="grid-item"><img src={ Logo08 }></div>
+    <div class="grid-item"><img src={ Logo09 }></div>
+    <div class="grid-item"><img src={ Logo10 }></div>
+    <div class="grid-item"><img src={ Logo11 }></div>
+    <div class="grid-item"><img src={ Logo12 }></div>
+     <div class="grid-item"><img src={ Logo13 }></div>
+    <div class="grid-item"><img src={ Logo14 }></div>
+    <div class="grid-item"><img src={ Logo15 }></div>
+  </div>
 </section>
 </Layout>
 
 <style>
 #work-container {
-  padding-top: 260px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.grid img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: bottom;
+  margin-top: 300px;
+  height: 100vh;
+  padding: 100px;
 }
 .grid {
-  max-width: 1700px;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/* clear fix */
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
-
-/* ---- .grid-item ---- */
-
 .grid-item {
   float: left;
-  width: 100px;
-  height: 100px;
-  background: #0D8;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.7);
+  width: 300px;
+  height: auto;
+}
+.grid-item img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+.grid-item--height2 { 
+  height: 150px; 
+}
+.grid-item--height3 { 
+  height: 240px; 
 }
 
-.grid-item--width2 { width: 200px; }
-.grid-item--height2 { height: 300px; }
+@media (max-width: 320px) {
+  .grid-item {
+    float: left;
+    width: 300px;
+    height: 160px;
+  }
+  .grid img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1120px) {
+  #work-container {
+    padding: 10px;
+  }
+}
 </style>
 
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -78,7 +130,8 @@ import Branding03 from '../images/portfolio/branding/bookmark-front.jpg';
 $('.grid').isotope({
   itemSelector: '.grid-item',
   masonry: {
-    columnWidth: 100
+    columnWidth: 100,
+    horizontalOrder: true
   }
 });
 </script>
