@@ -1,32 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { AstroSeo } from '@astrolib/seo';
-import MainImage1 from '../images/portfolio-item1.jpg';
-import MainImage2 from '../images/portfolio-item2.jpg';
-import MainImage3 from '../images/portfolio-item3.jpg';
-import MainImage4 from '../images/portfolio-item4.jpg';
-import MainImage5 from '../images/portfolio-item5.jpg';
-import MainImage6 from '../images/portfolio-item6.jpg';
+import WebPort01 from '../images/portfolio/web/das-1024x682.jpg';
+import WebPort02 from '../images/portfolio/web/mefashions-1480x960.jpg';
+import WebPort03 from '../images/portfolio/web/mefashions-1480x960.jpg';
+import Branding01 from '../images/portfolio/branding/AJ_Cards-Concept1.jpg';
+import Branding02 from '../images/portfolio/branding/Armored Support Kit2015-English.jpg';
+import Branding03 from '../images/portfolio/branding/bookmark-front.jpg';
 ---
 <AstroSeo
   title="Tria-Techni: Our"
   description="Our Work Page"
 />
 <Layout>
-<section id="work-container">
-
+<section>
     <div class="grid">
-      <div class="grid-sizer"></div>
-      <div class="grid-item"><img src={MainImage1}></div>
-      <div class="grid-item grid-item--width2 grid-item--height2"><img src={MainImage2}></div>
-      <div class="grid-item grid-item--height3"><img src={MainImage3}></div>
-      <div class="grid-item grid-item--height2"><img src={MainImage4}></div>
-      <div class="grid-item grid-item--width3"><img src={MainImage5}></div>
-      <div class="grid-item"><img src={MainImage6}></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
     </div>
-
 </section>
-
 </Layout>
 
 <style>
@@ -35,49 +38,47 @@ import MainImage6 from '../images/portfolio-item6.jpg';
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+}
 .grid {
-  background: #EEE;
-  max-width: auto;
+  max-width: 1700px;
 }
 
-/* clearfix */
+/* clear fix */
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* ---- grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-  width: 20%;
-}
+/* ---- .grid-item ---- */
 
 .grid-item {
-  height: 120px;
   float: left;
-  background: #D26;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
   border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
+  border-color: hsla(0, 0%, 0%, 0.7);
 }
 
-.grid-item--width2 { width:  40%; }
-.grid-item--width3 { width:  60%; }
-
-.grid-item--height2 { height: 200px; }
-.grid-item--height3 { height: 260px; }
-.grid-item--height4 { height: 360px; }
+.grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 300px; }
 </style>
 
-<script is:inline src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script is:inline src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
 <script is:inline>
-var elem = document.querySelector('.grid');
-var msnry = new Masonry( elem, {
+$('.grid').isotope({
   itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
+  masonry: {
+    columnWidth: 100
+  }
 });
 </script>
