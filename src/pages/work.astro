@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { AstroSeo } from '@astrolib/seo';
-import WebPort01 from '../images/portfolio/web/das-1024x682.jpg';
-import WebPort02 from '../images/portfolio/web/mefashions-1480x960.jpg';
-import WebPort03 from '../images/portfolio/web/natural-allergy4-1024x820.jpg';
+import WebPort01 from '../images/portfolio/web/thumbnails/portolfio-image01.jpg';
+import WebPort02 from '../images/portfolio/web/thumbnails/portolfio-image02.jpg';
+import WebPort03 from '../images/portfolio/web/thumbnails/portolfio-image03.jpg';
 import Branding01 from '../images/portfolio/branding/thumbnails/portolfio-image01.jpg';
 import Branding02 from '../images/portfolio/branding/thumbnails/portolfio-image02.jpg';
 import Branding03 from '../images/portfolio/branding/thumbnails/portolfio-image03.jpg';
@@ -39,8 +39,8 @@ import Logo15 from '../images/portfolio/logos/thumbnails/portolfio-image15.jpg';
 <Layout>
 <section id="work-container"> 
   <div class="container container_2">
-    <div class="item" style="height: 600px;"><img src={WebPort01} /></div>
-    <div class="item" style="height: 400px;"><img src={WebPort02} /></div>
+    <div class="item" style="height: 167px;"><img src={WebPort01} /></div>
+    <div class="item" style="height: 162px;"><img src={WebPort02} /></div>
     <div class="item" style="height: 200px;"><img src={WebPort03} /></div>
     <div class="item" style="height: 286px;"><img src={Branding01} /></div>
     <div class="item" style="height: 321px;"><img src={Branding02}  /></div>
@@ -74,7 +74,7 @@ import Logo15 from '../images/portfolio/logos/thumbnails/portolfio-image15.jpg';
 
 <style>
 #work-container {
-  margin-top: 480px;
+  margin-top: 380px;
   height: 100vh;
   padding: 0;
 }
@@ -102,6 +102,7 @@ import Logo15 from '../images/portfolio/logos/thumbnails/portolfio-image15.jpg';
 var masonry2 = new MiniMasonry({
   container: document.querySelector('.container_2'),
   baseWidth: 250,
-  gutter: 10
+  gutter: 10,
+  ultimateGutter: 10
 });
 </script>
