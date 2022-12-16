@@ -39,21 +39,27 @@ import Logo15 from '../images/portfolio/logos/VictorEnthios-Logo-1480x960.jpg';
 <Layout>
 <section id="work-container"> 
   <div class="container container_2">
-    <div class="item" style="height: 600px;"><img src="https://picsum.photos/300/600" /></div>
-    <div class="item" style="height: 400px;"><img src="https://picsum.photos/300/400" /></div>
-    <div class="item" style="height: 200px;"><img src="https://picsum.photos/300/200" /></div>
-    <div class="item" style="height: 300px;"><img src="https://picsum.photos/300/300" /></div>
-    <div class="item" style="height: 550px;"><img src="https://picsum.photos/300/550" /></div>
-    <div class="item" style="height: 220px;"><img src="https://picsum.photos/300/220" /></div>
-    <div class="item" style="height: 440px;"><img src="https://picsum.photos/300/440" /></div>
-    <div class="item" style="height: 430px;"><img src="https://picsum.photos/300/630" /></div>
+    <div class="item" style="height: 600px;"><img src={WebPort01} /></div>
+    <div class="item" style="height: 400px;"><img src={WebPort02} /></div>
+    <div class="item" style="height: 200px;"><img src={WebPort03} /></div>
+    <div class="item" style="height: 300px;"><img src={Branding01} /></div>
+    <div class="item" style="height: 550px;"><img src={Branding02}  /></div>
+    <div class="item" style="height: 220px;"><img src={Branding03}  /></div>
+    <div class="item" style="height: 440px;"><img src={Branding04}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding05}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding06}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding07}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding08}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding09}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding10}  /></div>
+    <div class="item" style="height: 430px;"><img src={Branding11}  /></div>
   </div>
 </section>
 </Layout>
 
 <style>
 #work-container {
-  margin-top: 300px;
+  margin-top: 480px;
   height: 100vh;
   padding: 0;
 }
@@ -81,6 +87,6 @@ import Logo15 from '../images/portfolio/logos/VictorEnthios-Logo-1480x960.jpg';
 var masonry2 = new MiniMasonry({
   container: document.querySelector('.container_2'),
   baseWidth: 300,
-  surroundingGutter: false
+  gutter: 10
 });
 </script>
