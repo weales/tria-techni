@@ -130,6 +130,11 @@ import Logo016 from '../images/portfolio/logos/full-size/VictorEnthios-Logo-1480
 .item img {
   border-radius: 10px;  
 }
+@media (min-width: 320px) and (max-width:1120px) {
+  #work-container {
+    margin-top: 260px;
+  }
+}
 </style>
 
 <script is:inline src="https://cdn.jsdelivr.net/npm/minimasonry@latest/build/minimasonry.min.js"></script>
@@ -137,7 +142,7 @@ import Logo016 from '../images/portfolio/logos/full-size/VictorEnthios-Logo-1480
 <script is:inline>
 var masonry2 = new MiniMasonry({
   container: document.querySelector('.container_2'),
-  baseWidth: 250,
+  baseWidth: 320,
   gutter: 10,
   ultimateGutter: 20
 });
