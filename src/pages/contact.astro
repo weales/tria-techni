@@ -9,12 +9,14 @@ import { AstroSeo } from '@astrolib/seo';
 <Layout>
 <section id="contact-container">
 
-<form action="/new/form" method="post">
+<form action="/new/form/process_email.php" method="post">
 <div class="form-container">
   <div>
   <input type="text" name="name" value="Name" required>
-  <input type="text" name="contact" value="Contact Number" required>
+  <input type="tel" name="contact" value="Contact Number" required>
   <input type="text" name="email" value="Email" required> 
+  <textarea name="message" cols="40" rows="5"></textarea>
+  <input type="submit" value="Send"> 
   </div>
 
   <div>Hi</div>
