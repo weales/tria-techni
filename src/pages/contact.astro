@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { AstroSeo } from '@astrolib/seo';
+---
+<AstroSeo
+  title="Tria-Techni: Our"
+  description="Contact Us"
+/>
+<Layout>
+<section id="contact-container">
+
+<form action="/new/form" method="post">
+<div class="form-container">
+  <div>
+  <input type="text" name="name" value="Name" required>
+  <input type="text" name="contact" value="Contact Number" required>
+  <input type="text" name="email" value="Email" required> 
+  </div>
+
+  <div>Hi</div>
+</div>
+</form>
+
+</section>
+</Layout>
+
+
+<style>
+  #contact-container {
+    margin-top: 380px;
+    height: 100vh;
+    padding: 0;
+  }
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .form-container input {
+    color: white;
+    background-color: #745760;
+    border-radius: 10px;
+    border: 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+</style>
