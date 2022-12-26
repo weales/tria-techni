@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { AstroSeo } from '@astrolib/seo';
+import contact from '../images/contact.jpg'
 ---
 <AstroSeo
   title="Tria-Techni: Our"
@@ -9,43 +10,69 @@ import { AstroSeo } from '@astrolib/seo';
 <Layout>
 <section id="contact-container">
 
-<form action="/new/form/process_email.php" method="post">
-<div class="form-container">
-  <div>
-  <input type="text" name="name" value="Name" required>
-  <input type="tel" name="contact" value="Contact Number" required>
-  <input type="text" name="email" value="Email" required> 
-  <textarea name="message" cols="40" rows="5"></textarea>
-  <input type="submit" value="Send"> 
-  </div>
-
-  <div>Hi</div>
+<form id="form" action="/new/form/process_email.php" method="post">
+<div>
+<label>Name</label><br>
+<input type="text" name="name" required>
 </div>
+
+<div>
+<label>Contact</label> <br>
+<input type="tel" name="contact" required>
+</div>
+
+<div>
+<label>Email</label><br>
+<input type="text" name="email" required>
+</div>
+
+<div>
+<label>Message</label>  <br>
+<textarea name="message" value="message" cols="40" rows="5"></textarea>
+</div>
+<input type="submit" value="Send">
 </form>
 
 </section>
 </Layout>
 
 
+
 <style>
   #contact-container {
     margin-top: 380px;
     height: 100vh;
-    padding: 0;
+    padding: 0 16px;
   }
-  .form-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  #form {
     margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.068) 1px, transparent 1px),
+              linear-gradient(rgba(0, 0, 0, 0.089) 1px, transparent 1px);
+  background-size: 10px 10px;
+  padding: 20px;
   }
-  .form-container input {
+  #form label {
     color: white;
-    background-color: #745760;
-    border-radius: 10px;
-    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+  }
+  #form input, #form textarea {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #745760;
     padding: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
+  }
+  #form input:focus, #form textarea:focus {
+    border: 2px solid #43415e;
+    border-radius: 10px;
+    outline: none;
+    transition: all 250ms ease-in-out;
+  }
+  @media (max-width: 1120px) {
+    #contact-container {
+      margin-top: 240px;
+    }
   }
 </style>
