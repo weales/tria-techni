@@ -1,7 +1,6 @@
 ---
 import { AstroSeo } from '@astrolib/seo';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import '@fontsource/teko';
 import '@fontsource/open-sans';
 import '../styles/global.css';
@@ -15,9 +14,8 @@ import '../styles/global.css';
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-    <Header /> 
-    <slot / >
-    <Footer />
+  <Header /> 
+  <slot / >
 </body>
 </html>
 <script src="../js/script.js"></script>
