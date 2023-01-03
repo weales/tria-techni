@@ -11,9 +11,9 @@ import { AstroSeo } from '@astrolib/seo';
 <section id="services-container">
 
 <div class="service_intro">
-<p>Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility </b> to ensure universal access.</p> 
+<p class="first-para">Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility </b> to ensure universal access.</p> 
 
-<p>We love making complex things simple and understandable. And we love helping organizations build UI design systems that are robust and scalable.
+<p class="second-para">We love making complex things simple and understandable. And we love helping organizations build UI design systems that are robust and scalable.
 </p>
 
 </div>
@@ -118,7 +118,13 @@ import { AstroSeo } from '@astrolib/seo';
 </Layout>
 
 <style>
-  .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
+.first-para, .second-para {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+
+.WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,9 +134,10 @@ import { AstroSeo } from '@astrolib/seo';
     max-width: 100%;
   }
   .test {
-    clip-path: polygon(75% 0%, 56% 49%, 75% 100%, 0% 100%, 55% 50%, 0% 0%);
+    opacity: 0;
+   /* clip-path: polygon(75% 0%, 56% 49%, 75% 100%, 0% 100%, 55% 50%, 0% 0%);
     animation: border-fadein 500ms ease-in;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
   }
 
   @keyframes border-fadein {
@@ -146,22 +153,8 @@ import { AstroSeo } from '@astrolib/seo';
 
   .WebDesign-bg {
     background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/test01.jpg');
-    clip-path: polygon(51% 34%, 54% 50%, 51% 63%, 49% 50%);
-    animation: bg-ani 800ms ease-in;
-    animation-fill-mode: forwards;
-  }
-  @keyframes bg-ani {
-    0% {
-      clip-path: polygon(51% 34%, 54% 50%, 51% 63%, 49% 50%);
-      opacity: 0;
-    }
-    50% {
-      clip-path: polygon(50% 0, 100% 48%, 50% 100%, 0 49%);
-    }
-    100% {
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-      opacity: 1;
-    }
+    clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
+    opacity: 0;
   }
 
 
@@ -260,22 +253,26 @@ import { AstroSeo } from '@astrolib/seo';
 <script is:inline>
 let tl = gsap.timeline ({ defaults: { ease: "Power4.easeInOut", duration: 2 } })
 tl.to('.logo', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 } )
-tl.to('.toggle', { opacity: 1, duration: 1, x:0, ease: "elastic" }, "-=.2" )
+tl.to('.first-para', { opacity: 1, y: 0, duration: 1 }, "-=.5" )
+tl.to('.second-para', { opacity: 1, y: 0, duration: 1 },"-=.5" )
+tl.to('.WebDesign-bg', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 },"-=.5" )
+tl.to('.test', {opacity: 1, duration: 1 },"-=.5" )
+tl.to('.toggle', { opacity: 1, duration: 1, x:0, ease: "elastic" }, "-=.4" )
 
+//.WebDesign-bg
+// clip-path: polygon(99% 0, 0 0, 0 100%, 100% 100%);
   /*gsap.registerPlugin(ScrollTrigger);
   
   gsap.to(".test", {
       scrollTrigger:{ 
-        trigger: ".WebDesign-bg",
-        start: "top 500px",
-        end: "bottom 100px",
-        markers: true // start the animation when ".box" enters the viewport (once)
+        trigger: ".second-para",
+        start: "bottom center",
+        markers: true
     },
     opacity: 1,
     x: 0
-  });
+  });*/
 
-  gsap.to('.indeed', { 'stroke-dashoffset': '-480' } ) */
 
 
 </script>
