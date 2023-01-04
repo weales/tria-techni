@@ -23,18 +23,18 @@ import { AstroSeo } from '@astrolib/seo';
         <div>
         <div class="WebDesign-bg"> 
         <h2 class="test">Web Design / Interactive</h2></div>
-        <div class="service-container">
+        <div class="service-container web-container">
          
-          <p>The Internet is an ever changing environment that 
+          <p class="first-web-para">The Internet is an ever changing environment that 
           demands that you keep up with the latest and greatest communication 
           platforms.</p> 
           
-          <p>Your website is the first impression for your company and 
+          <p class="second-web-para">Your website is the first impression for your company and 
           where customers make the decision to do business with you, decide what 
           products to buy, learn about events that are scheduled, who to consult, 
           and what information is most important to them.</p>
           
-          <p>Tria-Techni 
+          <p class="third-web-para">Tria-Techni 
           provides websites that by far, stand out from the rest of the 
           competitors...</p>    
         
@@ -44,7 +44,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div class="UIUX-bg"><h2>UI / UX</h2></div>
 
           <div class="service-container"> 
-          <p>Tria-Techni is passionate about an intuitive 
+          <p class="first-uiux-para">Tria-Techni is passionate about an intuitive 
           user experience because the user is ultimately the one who is the 
           target. We focus on the wants and needs of the user to create stunning 
           solutions through our experience in Research, Strategy, and Design 
@@ -57,7 +57,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div class="MobileDesign-bg"><h2>Mobile Design</h2></div>    
 
           <div class="service-container">  
-          <p>With tablets and smartphones on the rise, nearly half 
+          <p class="first-mobile-para">With tablets and smartphones on the rise, nearly half 
           of all internet users access online content from their mobile devices. 
           If your website is not optimized to be viewed on mobile devices, then 
           you may be losing customers. We design web sites that can be viewed on 
@@ -70,7 +70,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div class="BrandingDesign-bg"><h2>Branding</h2></div> 
 
           <div class="service-container">  
-          <p>Quality. Strength. Ability. Boldness. Trust.  What does
+          <p class="first-branding-para">Quality. Strength. Ability. Boldness. Trust.  What does
           your brand say about you? When the time comes for a customer to decide 
           on a brand will you be their first choice? Your brand needs to tell your
           story to the customer both consciously and subconsciously conveying the
@@ -85,7 +85,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div class="GraphicDesign-bg"> <h2>Graphic Design</h2></div> 
 
           <div class="service-container">
-          <p>Are you memorable? The differentiator between you and the 
+          <p class="first-graphic-para">Are you memorable? The differentiator between you and the 
           competitor is your design and you stand out in an over populated 
           marketplace. Our expert team of designers will craft the difference that
           gives you the validity and momentum your company needs to standout in 
@@ -98,7 +98,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div class="VideoEdit-bg"><h2>Video / Media</h2></div> 
 
           <div class="service-container"> 
-          <p>Media is like vapor in that it is always changing. Tria-Techni
+          <p class="first-video-para">Media is like vapor in that it is always changing. Tria-Techni
           creates dynamic and creative plans that move with the 
           market. We have a team of knowledgeable researchers skilled with all of 
           the techniques that allow us to quickly change and adapt your strategy 
@@ -118,12 +118,10 @@ import { AstroSeo } from '@astrolib/seo';
 </Layout>
 
 <style>
-.first-para, .second-para {
+.first-web-para, .second-web-para, .third-web-para, .first-uiux-para, .first-mobile-para, .first-branding-para, .first-graphic-para, .first-video-para  {
   opacity: 0;
   transform: translateY(100px);
 }
-
-
 .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
     display: flex;
     align-items: center;
@@ -135,20 +133,6 @@ import { AstroSeo } from '@astrolib/seo';
   }
   .test {
     opacity: 0;
-   /* clip-path: polygon(75% 0%, 56% 49%, 75% 100%, 0% 100%, 55% 50%, 0% 0%);
-    animation: border-fadein 500ms ease-in;
-    animation-fill-mode: forwards;*/
-  }
-
-  @keyframes border-fadein {
-    0% {
-      clip-path: polygon(75% 0%, 56% 49%, 75% 100%, 0% 100%, 55% 50%, 0% 0%);
-      opacity: 0;
-    }
-    100% {
-      clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 46%, 0% 0%);
-      opacity: 1;
-    }
   }
 
   .WebDesign-bg {
@@ -156,9 +140,10 @@ import { AstroSeo } from '@astrolib/seo';
     clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
     opacity: 0;
   }
-
-
-
+  .web-container, .first-web-para, .second-web-para, .third-web-para {
+    opacity: 0;
+    transform: translateY(100px);
+  }
   .UIUX-bg {
     background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/UI-Design.jpg');
   }
@@ -174,6 +159,15 @@ import { AstroSeo } from '@astrolib/seo';
   .VideoEdit-bg {
     background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/Video-Edited.jpg');
   }
+  .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg  {
+    clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
+    opacity: 0;
+  }
+  .service-container {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
   .WebDesign-bg h2, .UIUX-bg h2, .MobileDesign-bg h2, .BrandingDesign-bg h2, .GraphicDesign-bg h2, .VideoEdit-bg h2 {
     color: #ffffffe6;
     font-size: clamp(1.875rem, 5vw + 0.75rem, 5.625rem);
@@ -251,28 +245,40 @@ import { AstroSeo } from '@astrolib/seo';
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
 <script is:inline>
-let tl = gsap.timeline ({ defaults: { ease: "Power4.easeInOut", duration: 2 } })
-tl.to('.logo', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 } )
-tl.to('.first-para', { opacity: 1, y: 0, duration: 1 }, "-=.5" )
-tl.to('.second-para', { opacity: 1, y: 0, duration: 1 },"-=.5" )
-tl.to('.WebDesign-bg', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 },"-=.5" )
-tl.to('.test', {opacity: 1, duration: 1 },"-=.5" )
-tl.to('.toggle', { opacity: 1, duration: 1, x:0, ease: "elastic" }, "-=.4" )
-
-//.WebDesign-bg
-// clip-path: polygon(99% 0, 0 0, 0 100%, 100% 100%);
-  /*gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
   
-  gsap.to(".test", {
+  let tl = gsap.timeline ({ defaults: { ease: "Power4.easeInOut", duration: 2 } })
+  tl.to('.logo', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 } )
+  tl.to('.first-para', { opacity: 1, y: 0, duration: 1 }, "-=.5" )
+  tl.to('.second-para', { opacity: 1, y: 0, duration: 1 },"-=.5" )
+  tl.to('.WebDesign-bg', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 },"-=.5" )
+  tl.to('.test', {opacity: 1, duration: 1 },"-=.5" )
+  tl.to('.web-container', {opacity: 1, y:0, duration: 1 },"-=.5" )
+  tl.to('.first-web-para', {opacity: 1, y:0, duration: 1 },"-=.5" )
+  tl.to('.toggle', { opacity: 1, duration: 1, x:0, ease: "elastic" }, "-=.4" )
+  tl.to('.second-web-para', {opacity: 1, y:0, duration: 1 },"-=.5" )
+  tl.to('.third-web-para', {opacity: 1, y:0, duration: 1 },"-=.5" )
+
+  let tl2 = gsap.timeline({
       scrollTrigger:{ 
-        trigger: ".second-para",
-        start: "bottom center",
-        markers: true
-    },
+          trigger: ".UIUX-bg",
+          start: "top 80%",
+          markers: true
+      }
+  }); 
+
+  tl2.to(".UIUX-bg", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     opacity: 1,
-    x: 0
-  });*/
+    x: 0,
+    duration: 0.6
+  });
 
-
+ tl2.to(".service-container", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
 
 </script>
