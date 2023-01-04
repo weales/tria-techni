@@ -43,7 +43,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div>
         <div class="UIUX-bg"><h2>UI / UX</h2></div>
 
-          <div class="service-container"> 
+          <div class="service-container uiux-container"> 
           <p class="first-uiux-para">Tria-Techni is passionate about an intuitive 
           user experience because the user is ultimately the one who is the 
           target. We focus on the wants and needs of the user to create stunning 
@@ -56,7 +56,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div>
         <div class="MobileDesign-bg"><h2>Mobile Design</h2></div>    
 
-          <div class="service-container">  
+          <div class="service-container mobile-container">  
           <p class="first-mobile-para">With tablets and smartphones on the rise, nearly half 
           of all internet users access online content from their mobile devices. 
           If your website is not optimized to be viewed on mobile devices, then 
@@ -69,7 +69,7 @@ import { AstroSeo } from '@astrolib/seo';
         <div>
         <div class="BrandingDesign-bg"><h2>Branding</h2></div> 
 
-          <div class="service-container">  
+          <div class="service-container branding-container">  
           <p class="first-branding-para">Quality. Strength. Ability. Boldness. Trust.  What does
           your brand say about you? When the time comes for a customer to decide 
           on a brand will you be their first choice? Your brand needs to tell your
@@ -78,26 +78,26 @@ import { AstroSeo } from '@astrolib/seo';
           group of brand specialists and we know that your brand is more than just
           a logo.</p>
           </div>
-
+         
         </div>
 
         <div> 
         <div class="GraphicDesign-bg"> <h2>Graphic Design</h2></div> 
 
-          <div class="service-container">
+          <div class="service-container graphic-container">
           <p class="first-graphic-para">Are you memorable? The differentiator between you and the 
           competitor is your design and you stand out in an over populated 
           marketplace. Our expert team of designers will craft the difference that
           gives you the validity and momentum your company needs to standout in 
           the marketplace.</p>
           </div>
-
+          
         </div>
     
         <div>
         <div class="VideoEdit-bg"><h2>Video / Media</h2></div> 
 
-          <div class="service-container"> 
+          <div class="service-container video-container"> 
           <p class="first-video-para">Media is like vapor in that it is always changing. Tria-Techni
           creates dynamic and creative plans that move with the 
           market. We have a team of knowledgeable researchers skilled with all of 
@@ -105,7 +105,7 @@ import { AstroSeo } from '@astrolib/seo';
           based off of our detailed research.  Keep the momentum flowing - with 
           our help.</p>
           </div>
-
+         
         <div>
 
         </div>
@@ -118,10 +118,11 @@ import { AstroSeo } from '@astrolib/seo';
 </Layout>
 
 <style>
-.first-web-para, .second-web-para, .third-web-para, .first-uiux-para, .first-mobile-para, .first-branding-para, .first-graphic-para, .first-video-para  {
+.first-para, .second-para, .first-web-para, .second-web-para, .third-web-para, .first-uiux-para, .first-mobile-para, .first-branding-para, .first-graphic-para, .first-video-para  {
   opacity: 0;
   transform: translateY(100px);
 }
+
 .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
     display: flex;
     align-items: center;
@@ -134,7 +135,6 @@ import { AstroSeo } from '@astrolib/seo';
   .test {
     opacity: 0;
   }
-
   .WebDesign-bg {
     background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/test01.jpg');
     clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
@@ -228,7 +228,7 @@ import { AstroSeo } from '@astrolib/seo';
 }
 @media (min-width: 320px) and (max-width: 1120px) { 
   #services-container {
-    margin-top: 240px;
+    margin-top: 280px;
   }
   #services-container b {
     border-bottom: solid 1px #776aa5;
@@ -248,22 +248,22 @@ import { AstroSeo } from '@astrolib/seo';
   gsap.registerPlugin(ScrollTrigger);
   
   let tl = gsap.timeline ({ defaults: { ease: "Power4.easeInOut", duration: 2 } })
-  tl.to('.logo', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 } )
-  tl.to('.first-para', { opacity: 1, y: 0, duration: 1 }, "-=.5" )
-  tl.to('.second-para', { opacity: 1, y: 0, duration: 1 },"-=.5" )
-  tl.to('.WebDesign-bg', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 1 },"-=.5" )
+  tl.to('.logo', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 0.5 } )
+  tl.to('.first-para', { opacity: 1, y: 0, duration: 0.5 } )
+  tl.to('.second-para', { opacity: 1, y: 0, duration: 0.5 } )
+  tl.to('.WebDesign-bg', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 0.5 } )
   tl.to('.test', {opacity: 1, duration: 1 },"-=.5" )
-  tl.to('.web-container', {opacity: 1, y:0, duration: 1 },"-=.5" )
-  tl.to('.first-web-para', {opacity: 1, y:0, duration: 1 },"-=.5" )
-  tl.to('.toggle', { opacity: 1, duration: 1, x:0, ease: "elastic" }, "-=.4" )
-  tl.to('.second-web-para', {opacity: 1, y:0, duration: 1 },"-=.5" )
-  tl.to('.third-web-para', {opacity: 1, y:0, duration: 1 },"-=.5" )
+  tl.to('.web-container', {opacity: 1, y:0, duration: 0.5 },"-=.5" )
+  tl.to('.first-web-para', {opacity: 1, y:0, duration: 0.5 },"-=.5" )
+  tl.to('.toggle', { opacity: 1, duration: 0.5, x:0, ease: "elastic" }, "-=.4" )
+  tl.to('.second-web-para', {opacity: 1, y:0, duration: 0.5 },"-=.5" )
+  tl.to('.third-web-para', {opacity: 1, y:0, duration: 0.5 },"-=.5" )
 
   let tl2 = gsap.timeline({
       scrollTrigger:{ 
           trigger: ".UIUX-bg",
-          start: "top 80%",
-          markers: true
+          start: "-30px bottom",
+          markers: false
       }
   }); 
 
@@ -274,11 +274,131 @@ import { AstroSeo } from '@astrolib/seo';
     duration: 0.6
   });
 
- tl2.to(".service-container", {
+ tl2.to(".uiux-container", {
     'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     opacity: 1,
     y: 0,
     duration: 0.6
   });
 
+  tl2.to(".first-uiux-para", {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+
+  let tl3 = gsap.timeline({
+      scrollTrigger:{ 
+          trigger: ".MobileDesign-bg ",
+          start: "top center",
+          markers: true
+      }
+  });
+
+  tl3.to(".MobileDesign-bg", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    x: 0,
+    duration: 0.6
+  });
+
+ tl3.to(".mobile-container", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+  tl3.to(".first-mobile-para", {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+
+  let tl4 = gsap.timeline({
+      scrollTrigger:{ 
+          trigger: ".BrandingDesign-bg",
+          start: "top center",
+          markers: true
+      }
+  });
+
+  tl4.to(".BrandingDesign-bg", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    x: 0,
+    duration: 0.6
+  });
+
+ tl4.to(".branding-container", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+  tl4.to(".first-branding-para", {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+  let tl5 = gsap.timeline({
+      scrollTrigger:{ 
+          trigger: ".GraphicDesign-bg",
+          start: "top center",
+          markers: true
+      }
+  });
+
+  tl5.to(".GraphicDesign-bg", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    x: 0,
+    duration: 0.6
+  });
+
+ tl5.to(".graphic-container", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+  tl5.to(".first-graphic-para", {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+  let tl6 = gsap.timeline({
+      scrollTrigger:{ 
+          trigger: ".VideoEdit-bg",
+          start: "top center",
+          markers: true
+      }
+  });
+
+  tl6.to(".VideoEdit-bg", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    x: 0,
+    duration: 0.6
+  });
+
+ tl6.to(".video-container", {
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+
+  tl6.to(".first-video-para", {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  });
+  // VideoEdit-bg video-container first-video-para
 </script>
