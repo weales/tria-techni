@@ -262,8 +262,8 @@ import { AstroSeo } from '@astrolib/seo';
   let tl2 = gsap.timeline({
       scrollTrigger:{ 
           trigger: ".UIUX-bg",
-          start: "-30px bottom",
-          markers: false
+          start: "-50px center",
+          markers: false,
       }
   }); 
 
@@ -279,7 +279,7 @@ import { AstroSeo } from '@astrolib/seo';
     opacity: 1,
     y: 0,
     duration: 0.6
-  });
+  } ,"+=.5");
 
   tl2.to(".first-uiux-para", {
     opacity: 1,
@@ -291,8 +291,8 @@ import { AstroSeo } from '@astrolib/seo';
   let tl3 = gsap.timeline({
       scrollTrigger:{ 
           trigger: ".MobileDesign-bg ",
-          start: "top center",
-          markers: true
+          start: "-50px center",
+          markers: false
       }
   });
 
@@ -308,7 +308,7 @@ import { AstroSeo } from '@astrolib/seo';
     opacity: 1,
     y: 0,
     duration: 0.6
-  });
+  } ,"+=.5");
 
   tl3.to(".first-mobile-para", {
     opacity: 1,
@@ -320,8 +320,8 @@ import { AstroSeo } from '@astrolib/seo';
   let tl4 = gsap.timeline({
       scrollTrigger:{ 
           trigger: ".BrandingDesign-bg",
-          start: "top center",
-          markers: true
+          start: "-50px center",
+          markers: false
       }
   });
 
@@ -337,7 +337,7 @@ import { AstroSeo } from '@astrolib/seo';
     opacity: 1,
     y: 0,
     duration: 0.6
-  });
+  },"+=.5");
 
   tl4.to(".first-branding-para", {
     opacity: 1,
@@ -348,8 +348,8 @@ import { AstroSeo } from '@astrolib/seo';
   let tl5 = gsap.timeline({
       scrollTrigger:{ 
           trigger: ".GraphicDesign-bg",
-          start: "top center",
-          markers: true
+          start: "-50px center",
+          markers: false
       }
   });
 
@@ -365,7 +365,7 @@ import { AstroSeo } from '@astrolib/seo';
     opacity: 1,
     y: 0,
     duration: 0.6
-  });
+  },"+=.5");
 
   tl5.to(".first-graphic-para", {
     opacity: 1,
@@ -376,8 +376,8 @@ import { AstroSeo } from '@astrolib/seo';
   let tl6 = gsap.timeline({
       scrollTrigger:{ 
           trigger: ".VideoEdit-bg",
-          start: "top center",
-          markers: true
+          start: "-50px center",
+          markers: false
       }
   });
 
@@ -393,7 +393,7 @@ import { AstroSeo } from '@astrolib/seo';
     opacity: 1,
     y: 0,
     duration: 0.6
-  });
+  },"+=.5");
 
   tl6.to(".first-video-para", {
     opacity: 1,
