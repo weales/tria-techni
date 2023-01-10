@@ -7,10 +7,21 @@ import { AstroSeo } from '@astrolib/seo';
   description="Tria-Techni Creative Group specializes in accessible web design and mobile responsive designs, Custom WordPress, e commerce like Shopify and Accessibility."
 />
 <Layout>
-  
+
 <section id="services-container">
+<svg width="auto" height="137" class="top_design_element" viewBox="0 0 951 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 0C637.678 231.39 950.446 95.166 950.446 95.166" stroke="url(#paint0_linear_4_1088)" stroke-width="3" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_4_1088" x1="172.523" y1="104.271" x2="471.306" y2="169.961" gradientUnits="userSpaceOnUse">
+<stop offset="0.125" stop-color="#4D495E" stop-opacity="0.35"/>
+<stop offset="0.520833" stop-color="#716A9C" stop-opacity="0.48"/>
+<stop offset="0.880208" stop-color="#D79AA4" stop-opacity="0.46"/>
+</linearGradient>
+</defs>
+</svg>
 
 <div class="service_intro">
+ 
 <p class="first-para">Tria-Techni Creative Group is a UI design studio. We love to work with clients who are committed to <b>exceptional user experience</b> and <b>thoughtful consideration of accessibility </b> to ensure universal access.</p> 
 
 <p class="second-para">We love making complex things simple and understandable. And we love helping organizations build UI design systems that are robust and scalable.
@@ -118,11 +129,19 @@ import { AstroSeo } from '@astrolib/seo';
 </Layout>
 
 <style>
+  .service_intro {
+    padding-bottom: 40px;
+  }
 .first-para, .second-para, .first-web-para, .second-web-para, .third-web-para, .first-uiux-para, .first-mobile-para, .first-branding-para, .first-graphic-para, .first-video-para  {
   opacity: 0;
   transform: translateY(100px);
 }
-
+.top_design_element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 1500px;
+}
 .WebDesign-bg, .UIUX-bg, .MobileDesign-bg, .BrandingDesign-bg, .GraphicDesign-bg, .VideoEdit-bg {
     display: flex;
     align-items: center;
@@ -179,7 +198,7 @@ import { AstroSeo } from '@astrolib/seo';
     padding: 20px;
   }
   #services-container {
-    margin-top: 380px;
+    margin-top: 400px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -202,6 +221,11 @@ import { AstroSeo } from '@astrolib/seo';
   grid-template-columns: 1fr;
   grid-gap: 5vh;
   padding-bottom: 20px;
+}
+@media (min-width: 0px) and (max-width: 920px) { 
+  .top_design_element {
+    display: none;
+  }
 }
 @media (max-width: 320px) { 
   #services-container {
