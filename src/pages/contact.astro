@@ -9,30 +9,35 @@ import contact from '../images/contact.jpg'
 />
 <Layout>
 <section id="contact-container">
+  <div id="contact-form">
+  <form id="form" action="/new/form/process_email.php" method="post">
+    <h2>Say hello, we'd love to hear from you!</h2>
+    <div>
+    <label>Name</label><br>
+    <input type="text" name="name" required>
+    </div>
 
-<form id="form" action="/new/form/process_email.php" method="post">
-<div>
-<label>Name</label><br>
-<input type="text" name="name" required>
-</div>
+    <div>
+    <label>Contact</label> <br>
+    <input type="tel" name="contact" required>
+    </div>
 
-<div>
-<label>Contact</label> <br>
-<input type="tel" name="contact" required>
-</div>
+    <div>
+    <label>Email</label><br>
+    <input type="text" name="email" required>
+    </div>
 
-<div>
-<label>Email</label><br>
-<input type="text" name="email" required>
-</div>
+    <div>
+    <label>Message</label>  <br>
+    <textarea name="message" value="message" cols="40" rows="5"></textarea>
+    </div>
 
-<div>
-<label>Message</label>  <br>
-<textarea name="message" value="message" cols="40" rows="5"></textarea>
-</div>
-<input type="submit" value="Send">
-</form>
+  <input type="submit" value="Send">
 
+  </form>
+  </div>
+
+  <div>hi hi </div>
 </section>
 </Layout>
 
@@ -41,15 +46,22 @@ import contact from '../images/contact.jpg'
 <style>
   #contact-container {
     margin-top: 380px;
-    height: 100vh;
     padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #contact-form {
+    background-color: #55434A;
+    border-radius: 20px;
   }
   #form {
-    margin: 0 auto;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.068) 1px, transparent 1px),
-              linear-gradient(rgba(0, 0, 0, 0.089) 1px, transparent 1px);
-  background-size: 10px 10px;
+  margin: 0 auto;
   padding: 20px;
+  }
+  #form h2 {
+    color: white;
+    text-align: center;
+    font-size: 64px;
   }
   #form label {
     color: white;
@@ -58,15 +70,16 @@ import contact from '../images/contact.jpg'
   }
   #form input, #form textarea {
     color: white;
-    background-color: transparent;
-    border: 2px solid #745760;
+    background-color: #69525C;
+    border: none;
     padding: 1rem;
     margin-bottom: 1rem;
     width: 100%;
+    border-radius: 10px;
   }
   #form input:focus, #form textarea:focus {
-    border: 2px solid #43415e;
-    border-radius: 10px;
+    background-color: #7C626D;
+    border: none;
     outline: none;
     transition: all 250ms ease-in-out;
   }
