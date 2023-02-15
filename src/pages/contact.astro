@@ -27,6 +27,22 @@ import contact from '../images/contact.jpg'
     <input type="text" name="email" required>
     </div>
 
+    <div id="services-offered-container">
+        
+        <div>
+        <label><input type="checkbox" value="Branding"><span>Branding</span></label><br />
+        <label><input type="checkbox" value="REBranding"><span>REBranding</span></label><br />
+        <label><input type="checkbox" value="Market Research & Analysis"><span>Market Research & Analysis</span></label><br />
+        <label><input type="checkbox" value="Brand Positioning"><span>Brand Positioning</span></label>
+        </div>
+
+        <div>
+        <label><input type="checkbox" value="Logo design"><span>Logo design</span></label><br />
+        <label><input type="checkbox" value="Website / Ecommerce"><span>Website / Ecommerce</span></label><br />
+        <label><input type="checkbox" value="mobile app"><span>mobile app</span></label><br />
+        <label><input type="checkbox" value="custom application"><span>custom application</span></label>
+        </div>
+    </div>
     <div>
     <label>Message</label>  <br>
     <textarea name="message" value="message" cols="40" rows="5"></textarea>
@@ -82,6 +98,30 @@ import contact from '../images/contact.jpg'
     border: none;
     outline: none;
     transition: all 250ms ease-in-out;
+  }
+  #services-offered-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+  }
+  #services-offered-container input[type="checkbox"] {
+    display: none;
+  }
+  #services-offered-container span {
+    display: inline-block;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #69525C;
+    cursor: pointer;
+  }
+  #services-offered-container input[type="checkbox"]:checked + span {
+    background-color: #7C626D;
+    transition: all 0.3s ease-in-out;
   }
   @media (max-width: 1120px) {
     #contact-container {
