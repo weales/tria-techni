@@ -26,9 +26,9 @@ import contact from '../images/contact.jpg'
     <label>Email</label><br>
     <input type="text" name="email" required>
     </div>
-
+    <h3>Services Concerned</h3>
     <div id="services-offered-container">
-        
+      
         <div>
         <label><input type="checkbox" value="Branding"><span>Branding</span></label><br />
         <label><input type="checkbox" value="REBranding"><span>REBranding</span></label><br />
@@ -42,13 +42,15 @@ import contact from '../images/contact.jpg'
         <label><input type="checkbox" value="mobile app"><span>mobile app</span></label><br />
         <label><input type="checkbox" value="custom application"><span>custom application</span></label>
         </div>
-    </div>
-    <div>
-    <label>Message</label>  <br>
-    <textarea name="message" value="message" cols="40" rows="5"></textarea>
+
     </div>
 
-  <input type="submit" value="Send">
+    <div>
+      <h3>Message</h3>
+      <div id="message-container"><textarea name="message" value="message" cols="40" rows="5"></textarea></div>
+    </div>
+
+  <input type="submit" class="feedback-button" value="Send">
 
   </form>
   </div>
@@ -60,6 +62,12 @@ import contact from '../images/contact.jpg'
 
 
 <style>
+  h3 {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    color: white;
+  }
   #contact-container {
     margin-top: 380px;
     padding: 0 16px;
@@ -102,7 +110,11 @@ import contact from '../images/contact.jpg'
   #services-offered-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px
+    gap: 20px;
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+    border: solid 4px #7D646F;
+    margin-bottom: 20px;
   }
   #services-offered-container input[type="checkbox"] {
     display: none;
@@ -122,6 +134,18 @@ import contact from '../images/contact.jpg'
   #services-offered-container input[type="checkbox"]:checked + span {
     background-color: #7C626D;
     transition: all 0.3s ease-in-out;
+  }
+  #message-container {
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+    border: solid 4px #7D646F;
+    margin-bottom: 20px;
+  }
+  .feedback-button {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    cursor: pointer;
   }
   @media (max-width: 1120px) {
     #contact-container {
