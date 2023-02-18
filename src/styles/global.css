@@ -37,6 +37,19 @@ p {
 input, textarea {
   font-family: 'Open Sans', sans-serif;
 }
+.top_design_element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 1500px;
+}
+
+@media (min-width: 0px) and (max-width: 920px) { 
+  .top_design_element {
+    display: none;
+  }
+}
+
 /* ANIMATION */
 .image_rotate {
   animation: rotation 120s infinite linear;
