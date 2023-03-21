@@ -64,11 +64,54 @@ import contact from '../images/contacttest.jpg'
   </form>
   </div>
 </section>
+
+<div class="bg-grid">
+  <div class="noise">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
+</div>
+</div>
 </Layout>
 
 
 
 <style>
+  /*main::before {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    background-repeat: repeat;
+    content: "";
+    background-size: 10px 10px;
+    background-image: linear-gradient(to right,rgb(35 38 45) 1px,transparent 1px),linear-gradient(to bottom,rgb(35 38 45) 1px,transparent 1px);
+    -webkit-mask-image: linear-gradient(to bottom,white,transparent);
+    mask-image: linear-gradient(to bottom,white,transparent);
+    z-index: -1;
+  }*/
+  .bg-grid {
+  position: relative;
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right,#23262D 1px,transparent 1px),linear-gradient(to bottom,#23262D 1px,transparent 1px);
+  background-position: top center;
+  image-rendering: pixelated;
+  -webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+  mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+  padding: 20px;
+  }
+  /*.noise {
+  z-index: -20;
+  position: absolute;
+  inset: 0;
+  background-image: url(http://localhost:3000/new/images/noise.webp);
+  opacity: .4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  }*/
   h3 {
     text-transform: uppercase;
   }
