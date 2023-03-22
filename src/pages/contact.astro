@@ -8,7 +8,7 @@ import contact from '../images/contacttest.jpg'
   description="Contact Us"
 />
 <Layout>
-<section id="contact-container">
+<section class="contact-container bg-grid">
   <svg width="auto" height="137" class="top_design_element" viewBox="0 0 951 137" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M2 0C637.678 231.39 950.446 95.166 950.446 95.166" stroke="url(#paint0_linear_4_1088)" stroke-width="3" stroke-linecap="round"/>
   <defs>
@@ -64,18 +64,6 @@ import contact from '../images/contacttest.jpg'
   </form>
   </div>
 </section>
-
-<div class="bg-grid">
-  <div class="noise">
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, rerum vitae laudantium aperiam deleniti sunt numquam nostrum doloribus earum veniam harum dolorum iusto sapiente rem repudiandae obcaecati temporibus, nobis dolore.</p>
-</div>
-</div>
 </Layout>
 
 
@@ -94,14 +82,12 @@ import contact from '../images/contacttest.jpg'
     z-index: -1;
   }*/
   .bg-grid {
-  position: relative;
-  background-size: 40px 40px;
+  background-size: 20px 20px;
   background-image: linear-gradient(to right,#4a465e 1px,transparent 1px),linear-gradient(to bottom,#4a465e 1px,transparent 1px);
   background-position: top center;
   image-rendering: pixelated;
   -webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
   mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
-  padding: 20px;
   }
   /*.noise {
   z-index: -20;
@@ -115,9 +101,9 @@ import contact from '../images/contacttest.jpg'
   h3 {
     text-transform: uppercase;
   }
-  #contact-container {
+  .contact-container {
     margin-top: 380px;
-    padding: 0 16px;
+    padding: 40px;
   }
   #contact-form {
     clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
