@@ -9,7 +9,7 @@ import contact from '../images/contacttest.jpg'
 />
 <Layout>
 <section class="contact-container bg-grid">
-  <svg width="auto" height="137" class="top_design_element" viewBox="0 0 951 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--<svg width="auto" height="137" class="top_design_element" viewBox="0 0 951 137" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M2 0C637.678 231.39 950.446 95.166 950.446 95.166" stroke="url(#paint0_linear_4_1088)" stroke-width="3" stroke-linecap="round"/>
   <defs>
   <linearGradient id="paint0_linear_4_1088" x1="172.523" y1="104.271" x2="471.306" y2="169.961" gradientUnits="userSpaceOnUse">
@@ -18,8 +18,9 @@ import contact from '../images/contacttest.jpg'
   <stop offset="0.880208" stop-color="#D79AA4" stop-opacity="0.46"/>
   </linearGradient>
   </defs>
-  </svg>
+  </svg> -->
   <div id="contact-form">
+    <div class="noise">hello jello</div>
   <form id="form" action="/new/form/process_email.php" method="post">
     <div>
     <label>Name</label><br>
@@ -69,35 +70,17 @@ import contact from '../images/contacttest.jpg'
 
 
 <style>
-  /*main::before {
-    position: absolute;
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    background-repeat: repeat;
-    content: "";
-    background-size: 10px 10px;
-    background-image: linear-gradient(to right,rgb(35 38 45) 1px,transparent 1px),linear-gradient(to bottom,rgb(35 38 45) 1px,transparent 1px);
-    -webkit-mask-image: linear-gradient(to bottom,white,transparent);
-    mask-image: linear-gradient(to bottom,white,transparent);
-    z-index: -1;
-  }*/
   .bg-grid {
-  background-size: 20px 20px;
+  background-size: 30px 30px;
   background-image: linear-gradient(to right,#4a465e 1px,transparent 1px),linear-gradient(to bottom,#4a465e 1px,transparent 1px);
   background-position: top center;
   image-rendering: pixelated;
-  -webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
-  mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+  mask-image: linear-gradient(180deg,transparent 3%,rgb(0, 0, 0) 7%,rgb(0, 0, 0) 94%,transparent 98%)
   }
-  /*.noise {
-  z-index: -20;
-  position: absolute;
-  inset: 0;
-  background-image: url(http://localhost:3000/new/images/noise.webp);
-  opacity: .4;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  }*/
+  .noise {
+  background-image: url('/images/noise.webp');
+  }
+
   h3 {
     text-transform: uppercase;
   }
@@ -110,6 +93,7 @@ import contact from '../images/contacttest.jpg'
     opacity: 0;
     background-color: #55434A;
     border-radius: 20px;
+    margin: 60px 0;
   }
   #form {
     margin: 0 auto;
