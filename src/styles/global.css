@@ -43,7 +43,20 @@ input, textarea {
   right: 0;
   max-width: 1500px;
 }
-
+.noise::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(49, 46, 54, 0.94);
+  }
+.noise {
+  position: relative; 
+  background-image: url(../images/noise.webp);
+  mask-image: linear-gradient(180deg,transparent 3%,rgb(0, 0, 0) 7%,rgb(0, 0, 0) 94%,transparent 98%)
+  }
 @media (min-width: 0px) and (max-width: 920px) { 
   .top_design_element {
     display: none;
