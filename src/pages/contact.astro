@@ -7,20 +7,16 @@ import { AstroSeo } from '@astrolib/seo';
   description="Contact Us"
 />
 <Layout>
+
+  <div class="testie">
+    <div class="noise-test"></div>
+  </div>
+ 
 <section class="noise-container">
 <div class="noise">
-
+ 
   <div class="contact-container bg-grid">
-  <!--<svg width="auto" height="137" class="top_design_element" viewBox="0 0 951 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M2 0C637.678 231.39 950.446 95.166 950.446 95.166" stroke="url(#paint0_linear_4_1088)" stroke-width="3" stroke-linecap="round"/>
-  <defs>
-  <linearGradient id="paint0_linear_4_1088" x1="172.523" y1="104.271" x2="471.306" y2="169.961" gradientUnits="userSpaceOnUse">
-  <stop offset="0.125" stop-color="#4D495E" stop-opacity="0.35"/>
-  <stop offset="0.520833" stop-color="#716A9C" stop-opacity="0.48"/>
-  <stop offset="0.880208" stop-color="#D79AA4" stop-opacity="0.46"/>
-  </linearGradient>
-  </defs>
-  </svg> -->
+    <div class="heading-bg">Contact Us</div>
   <div id="contact-form">
     <form id="form" action="/new/form/process_email.php" method="post">
     <div>
@@ -71,14 +67,30 @@ import { AstroSeo } from '@astrolib/seo';
 </Layout>
 
 
-
 <style>
+  .heading-bg {
+    background: radial-gradient(#5235c8 0%,#bc52ee 100%);
+    mask-image: radial-gradient(rgba(0,0,0,.5),transparent 70%);
+    background-blend-mode: overlay;
+    width: 100vw;
+    height: 583px
+  }
+  .testie {
+    position: absolute;
+    top: -253px;
+    right: -90%;
+    background: linear-gradient(83.21deg,#5235c8 0%,#bc52ee 100%);
+    mask-image: radial-gradient(rgba(0,0,0,.5),transparent 70%);
+    background-blend-mode: overlay;
+    width: 159%;
+    height: 585px;
+  }
   .bg-grid {
-  background-size: 40px 40px;
-  background-image: linear-gradient(to right,#4a465e 1px,transparent 1px),linear-gradient(to bottom,#4a465e 1px,transparent 1px);
-  background-position: top center;
-  image-rendering: pixelated;
-  mask-image: linear-gradient(180deg,transparent 3%,rgb(0, 0, 0) 7%,rgb(0, 0, 0) 94%,transparent 98%)
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right,#4a465e 1px,transparent 1px),linear-gradient(to bottom,#4a465e 1px,transparent 1px);
+    background-position: top center;
+    image-rendering: pixelated;
+    mask-image: linear-gradient(180deg,transparent 3%,rgb(0, 0, 0) 7%,rgb(0, 0, 0) 94%,transparent 98%);
   }
   h3 {
     text-transform: uppercase;
@@ -88,7 +100,6 @@ import { AstroSeo } from '@astrolib/seo';
     padding: 40px;
   }
   #contact-form {
-    max-width: 1700px;
     clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
     opacity: 0;
     background-color: #55434A;
@@ -188,4 +199,5 @@ import { AstroSeo } from '@astrolib/seo';
   tl.to('.logo', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 0.5 } )
   tl.to('#contact-form', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 0.5 } )
   tl.to('.toggle', { opacity: 1, duration: 0.5, x:0, ease: "elastic" }, "-=.4" )
+
 </script>
