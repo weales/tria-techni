@@ -16,9 +16,11 @@ import { AstroSeo } from '@astrolib/seo';
 <div class="noise">
  
   <div class="contact-container bg-grid">
-    <div class="heading-bg">
+    
+    <!--<div class="heading-bg">
       <div><h2>Contact Us</h2></div>
-    </div>
+    </div>-->
+
   <div id="contact-form">
     <form id="form" action="/new/form/process_email.php" method="post">
     <div>
@@ -71,19 +73,26 @@ import { AstroSeo } from '@astrolib/seo';
 
 <style>
   .heading-bg {
-    display: flex;
+    position: relative;
     background: radial-gradient(#5235c8 0%,#bc52ee 100%);
     mask-image: radial-gradient(rgba(0,0,0,.5),transparent 70%);
     width: 100vw;
     height: 583px;
     margin-top: 40px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   .heading-bg h2 {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-size: clamp(1.875rem, 5vw + 0.75rem, 5.625rem);
+    z-index: 900;
   }
   .testie {
     position: absolute;
