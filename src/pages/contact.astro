@@ -8,20 +8,19 @@ import { AstroSeo } from '@astrolib/seo';
 />
 <Layout>
 
-  <div class="testie">
-    <div class="noise-test"></div>
-  </div>
+<div class="testie">
+  <div class="noise-test"></div>
+</div>
 
 <section class="noise-container">
 <div class="noise">
  
   <div class="contact-container bg-grid">
-    <!--more changes -->
-    <!--<div class="heading-bg">
-      <div><h2>Contact Us</h2></div>
-    </div>-->
+  
 
   <div id="contact-form">
+    <div class="contact-bg">
+    </div>
     <form id="form" action="/new/form/process_email.php" method="post">
     <div>
     <label>Name</label><br>
@@ -72,29 +71,24 @@ import { AstroSeo } from '@astrolib/seo';
 
 
 <style>
-
-  .heading-bg {
-    position: relative;
-    background: radial-gradient(#5235c8 0%,#bc52ee 100%);
-    mask-image: radial-gradient(rgba(0,0,0,.5),transparent 70%);
-    width: 100vw;
-    height: 583px;
-    margin-top: 40px;
-  }
-  .heading-bg h2 {
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    text-align: center;
+.contact-bg {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: clamp(1.875rem, 5vw + 0.75rem, 5.625rem);
-    z-index: 900;
+    background-size: cover;
+    background-position: center center;
+    height: 450px;
+    width: auto;
+    max-width: 100%;
+    background-image: url('../images/noise.png'), linear-gradient(180deg, transparent, #0000008c), url('../images/contact.jpg');
+    position: relative;
   }
+  .contact-bg h2 {  
+     color: #ffffffe6;
+    font-size: clamp(1.875rem, 5vw + 0.75rem, 5.625rem);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }  
   .testie {
     position: absolute;
     top: -253px;
@@ -123,8 +117,7 @@ import { AstroSeo } from '@astrolib/seo';
     clip-path: polygon(66% 0, 69% 0, 0 100%, 0% 100%);
     opacity: 0;
     background-color: #55434A;
-    border-radius: 20px;
-    margin: 60px auto;
+    margin: 100px auto;
   }
   #form {
     margin: 0 auto;
