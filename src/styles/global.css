@@ -1,4 +1,5 @@
 :root {
+  --background-color: #312e36;
   --primary-color: #776aa5;
   --secondary-color: #1b206e;
   --purple-color: #776aa5;
@@ -15,7 +16,7 @@
 html,
 body {
   font-family: 'Teko', sans-serif;
-  background-color: #312e36;
+  background-color: var(--background-color);
   
 }
 body {
